@@ -1,0 +1,214 @@
+* {
+
+  margin: 0%;
+  
+  
+}
+body{
+  background-color: whitesmoke;
+}
+
+#navbar {
+  overflow: hidden;
+  padding: 36px;
+  background-color: orangered;
+
+
+  font-family: tahoma, sans-serif;
+}
+
+#navbar a {
+  /*for texts written in nav bar*/
+  color: whitesmoke;
+  padding: 10px;
+  margin: 25px;
+  text-decoration: none;
+}
+
+.button {
+  border: 1px solid;
+  border-radius: 10px;
+
+
+}
+
+#navbar a:hover {
+  background-color: red;
+}
+
+header {
+  
+  background-position: right;
+
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/*.sticky + .content {
+  padding-top: 60px;
+}*/
+.logo {
+  position: absolute;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  mix-blend-mode: multiply;
+
+}
+
+.image {
+  overflow: hidden;
+}
+
+.image figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 15s image infinite;
+}
+
+.image figure img {
+  float: left;
+  width: 20%;
+}
+
+@keyframes image {
+  0% {
+    left: 0;
+  }
+
+  20% {
+    left: 0;
+  }
+
+  25% {
+    left: -100%;
+  }
+
+  45% {
+    left: -100%;
+  }
+
+  50% {
+    left: -200%;
+  }
+
+  70% {
+    left: -200%;
+  }
+
+  75% {
+    left: -300%;
+  }
+
+  95% {
+    left: -300%;
+  }
+
+  100% {
+    left: -400%;
+  }
+}
+.why{
+  width: 270px;
+  border: 15px solid rgb(228, 115, 74);
+  padding: 25px;
+  margin: 25px;
+  border-radius: 10px 10px;
+  font-family: tahoma sans-serif;
+  margin-left: 25vh;
+  box-shadow: 10px 10px 5px rgb(230, 183, 165) ;
+  font-size: medium;
+
+}
+.vision{
+  width: 270px;
+  border: 15px solid rgb(228, 115, 74);
+  padding: 25px;
+  margin: 25px;
+  border-radius: 10px 10px;
+  font-family: tahoma sans-serif;
+  box-shadow: 10px 10px 5px rgb(230, 183, 165) ;
+  font-size: medium;
+}
+.goal{
+  width: 270px;
+  border: 15px solid rgb(228, 115, 74);
+  padding: 25px;
+  margin: 25px;
+  border-radius: 10px 10px;
+  font-family: tahoma sans-serif;
+  box-shadow: 10px 10px 5px rgb(230, 183, 165) ;
+  font-size: medium;
+}
+.saver{
+  width: 1479px;
+  border: none;
+  background-color: bisque;
+  text-align: center;
+  font-size: x-large;
+  padding: 20px;
+  font-family: tahoma sans-serif;
+  font-style: oblique;
+  }
+
+.button2{
+  border: 1px solid;
+  padding: 7px;
+  border-radius: 10px 10px;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(237, 202, 160);
+}
+#whyus{
+  border: 1px none;
+  font-family: tahoma, sana-serif;
+  font-size: medium;
+  text-align:left ;
+  padding-right: 100px;
+  padding-top: 90px;
+}
+#about{
+  border: 1px none;
+  font-family: tahoma, sana-serif;
+  font-size: medium;
+  text-align:left ;
+  padding-left: 100px;
+  padding-top: 90px;
+  
+}
+.digit{
+  width: 200px;
+  border: 1px none;
+  padding: 25px;
+  margin: 25px;
+  border-radius: 10px 10px;
+  font-family: tahoma sans-serif;
+  box-shadow: 10px 10px 5px rgb(230, 183, 165) ;
+  font-size: medium;
+  margin-top: 10vh;
+}
+.motive{
+  width: 300px;
+  border: 1px none;
+  padding: 25px;
+  margin: 25px;
+  border-radius: 10px 10px;
+  font-family: tahoma sans-serif;
+  box-shadow: 10px 10px 5px rgb(230, 183, 165) ;
+  font-size: medium;
+  margin-bottom: 15vh;
+}
+#footer {
+  font-size: large;
+  font-family: tahoma, sans-serif;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(209, 230, 238);
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
