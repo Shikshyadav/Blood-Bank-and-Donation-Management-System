@@ -8,34 +8,50 @@ body{
   background-color: whitesmoke;
 }
 
-#navbar {
-  overflow: hidden;
-  padding: 36px;
+.nav {
   background-color: orangered;
-
-
-  font-family: tahoma, sans-serif;
+  top: 8;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
 }
-
-#navbar a {
-  /*for texts written in nav bar*/
-  color: whitesmoke;
+.flex-container {
+  display: flex;
+  
+  align-items: center;
   padding: 10px;
-  margin: 25px;
-  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  
 }
 
-.button {
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  
+}
+.nav a:hover {
+  
+  color: black;
+}
+.button{
   border: 1px solid;
   border-radius: 10px;
-
-
 }
 
-#navbar a:hover {
-  background-color: red;
-}
 
+/*#navbar a:hover {
+    background-color: red;
+    color: black;
+  }
 header {
   
   background-position: right;
@@ -47,7 +63,7 @@ header {
   top: 0;
   width: 100%;
 }
-/*.sticky + .content {
+.sticky + .content {
   padding-top: 60px;
 }*/
 .logo {
