@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate</title>
+  <link rel="stylesheet" type="text/css" href="donate.css">
+</head>
+
+<body>
+  <div>
+    <nav class="nav">
+      <div class="flex-container">
+
+        <img src="orangered.png" height="60px" width="80px" style="margin-left: 10vh;" alt="logo">
+        <ul>
+          <b>
+            <li><a href="HemoGive.html" style="margin-left: 30vh;">Home</a></li>
+          </b>
+          <b>
+            <li><a href="#about" style="margin-left: 20px;">About Us</a></li>
+          </b>
+          <b>
+            <li><a href="#whyus" style="margin-left: 20px;">Why Us?</a></li>
+          </b>
+          <b>
+            <li><a href="#footer" style="margin-left: 20px;">Contact Us</a></li>
+          </b>
+          <b>
+            <li><a href="#" class="button" style="margin-left: 30vh;">Donate Blood</a></li>
+          </b>
+          <b>
+            <li><a href="#" class="button" style="margin-left: 30px;">Request Blood</a></li>
+          </b>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <br><br><br><br><br><br>
+  <div>
+    <h1>Donate Blood</h1>
+  </div>
+  <div class="mainbody">
+    <div class="img" style="display: inline-block;">
+      <img src="girl.jpg" height="400" width="450">
+    </div>
+    <div class="outerbox" style="display: inline-block;">
+      <form method="post" onsubmit="submitted=true">
+        <span class="title"> <b>Please send us your detail</span><br>
+        <input type="text" name="Name" placeholder="Name" required><br>
+        <input type="tel" name="Phone" placeholder="Phone" required><br>
+        <input type="text" name="Email" placeholder="Email"><br>
+        <input type="text" name="Date of Birth" placeholder="Date of Birth" onfocus="(this.type='date')"
+          onblur="(this.type='text')"><br>
+        <select name="gender" id="gender">
+          <option value="Gender">Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <select name="Blood" id="bloodgrp">
+          <option value="bloodgrp">Blood Group</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="unknown">Unknown</option>
+        </select><br>
+        <input type="text" name="address" placeholder="Address"><br>
+        <input type=submit value=Submit id="submit">
+        </center>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
