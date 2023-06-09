@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donate</title>
-  <link rel="stylesheet" type="text/css" href="donate.css">
+  <title>Request</title>
+  <link rel="stylesheet" href="request1.css">
   <link rel="icon" href="drop1.jpg">
   <script type="text/javascript">
     function validateForm() {
@@ -52,21 +52,14 @@
         return false;
       }
 
-      if (gender == "") {
-        alert("Gender must be selected");
-        return false;
-      }
+  
 
       if (bloodGroup == "") {
         alert("Blood group must be selected");
         return false;
       }
-
-      if (dob == "") {
-        alert("Date of birth must be filled out");
-        return false;
-      }
     }
+
   </script>
 </head>
 
@@ -101,26 +94,21 @@
   </div>
   <br><br><br><br><br><br>
   <div>
-    <h1>Donate Blood</h1>
+    <h1>Request Blood</h1>
   </div>
   <div class="mainbody">
     <div class="img" style="display: inline-block;">
-      <img src="girl.jpg" height="400" width="450">
+      <img src="donate1.jpg" height="550" width="450">
     </div>
     <div class="outerbox" style="display: inline-block;">
         <form name="myForm" onsubmit="return validateForm()" method="post">
-        <span class="title"> <b>Please send us your detail</b></span><br>
+        <span class="title"> <b>Blood Request Form</b></span><br>
         <input type="text" name="Name" placeholder="Name" required><br>
         <input type="tel" name="Phone" placeholder="Phone" required><br>
         
         <input type="email" name="Email" placeholder="Email" required><br>
-        <input type="text" name="dob" placeholder="Date of Birth" onfocus="(this.type='date')" required><br>
-        <select name="gender" id="gender" required>
-          <option value="Gender">Gender</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select>
-        <select name="Blood" id="bloodgrp" required>
+        <textarea name="note" id="note" cols="43" rows="4" placeholder="Note"></textarea>     
+         <select name="Blood" id="bloodgrp" required>
           <option value="bloodgrp">Blood Group</option>
           <option value="A+">A+</option>
           <option value="A-">A-</option>
@@ -133,7 +121,7 @@
           <option value="unknown">Unknown</option>
         </select><br>
         <input type="text" name="address" placeholder="Address"><br>
-        <input type=submit name="submit" value=Submit id="submit" >
+        <input type="submit" name="submit" value="Submit" id="submit" >
         </center>
       </form>
     </div>

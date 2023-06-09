@@ -78,7 +78,7 @@
     
   }
   .outerbox{
-    margin-top: 10px;
+    margin-top: 2px;
     width: 33%;
     margin-left: 10em;
     
@@ -104,21 +104,26 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #ff0000;
 }
-#gender{
+/*#gender{
   width: 12.5em;
+  height: 3em;
+  background-color: rgb(240, 230, 230);
+  border-radius: 10px;
+  border-color: rgb(240, 230, 230);
+
+}*/
+#bloodgrp{
+  width: 25em;
   height: 3em;
   background-color: rgb(240, 230, 230);
   border-radius: 10px;
   border-color: rgb(240, 230, 230);
 
 }
-#bloodgrp{
-  width: 12.5em;
-  height: 3em;
-  background-color: rgb(240, 230, 230);
-  border-radius: 10px;
-  border-color: rgb(240, 230, 230);
-
+#note{
+    background-color: rgb(240, 230, 230);
+    border-radius: 10px;
+    border-color: rgb(240, 230, 230);
 }
 /*#submit{
   border: 1px solid;
