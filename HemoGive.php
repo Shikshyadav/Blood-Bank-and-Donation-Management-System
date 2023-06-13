@@ -25,17 +25,24 @@
           <b>
             <li><a href="#about" style="margin-left: 20px;">About Us</a></li>
           </b>
+        
           <b>
             <li><a href="#whyus" style="margin-left: 20px;">Why Us?</a></li>
           </b>
           <b>
             <li><a href="#footer" style="margin-left: 20px;">Contact Us</a></li>
+            
           </b>
           <b>
-            <li><a href="donate.html" class="button" style="margin-left: 30vh;">Donate Blood</a></li>
+            <li>
+              <a href="admin.php" class="button" style="margin-left: 10vh; background-color: white; color: orangered;">Admin</a>
+            </li>
           </b>
           <b>
-            <li><a href="request.html" class="button" style="margin-left: 30px;">Request Blood</a></li>
+            <li><a href="donate.php" class="button" style="margin-left: 10vh;">Donate Blood</a></li>
+          </b>
+          <b>
+            <li><a href="request1.php" class="button" style="margin-left: 30px;">Request Blood</a></li>
           </b>
         </ul>
       </div>
@@ -62,7 +69,7 @@
       between life and death.
       <br>Be the reason for someones heartbeat!
     </p><br><br>
-    <center><a href="donate.html" class="button2" style="width: 30vh;">
+    <center><a href="donate.php" class="button2" style="width: 30vh;">
         Become a life saver
       </a>
     </center>

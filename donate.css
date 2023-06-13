@@ -45,6 +45,7 @@
   .button{
     border: 1px solid;
     border-radius: 10px;
+
   }
   .logo {
     position: absolute;
@@ -91,8 +92,8 @@
     border-radius: 10px;
     border-color: rgb(240, 230, 230);
 }
-input[type="submit"] {
-  margin-left: 6vw;
+input[type="submit"], input[type="button"]{
+  margin-left: 1vw;
   background-color: #fc0808;
   color: white;
   width: 10em;
@@ -100,10 +101,10 @@ input[type="submit"] {
   border-radius: 10px;
   font-size: 15px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
-input[type="submit"]:hover {
-  background-color: #ff0000;
-}
+
+
 #gender{
   width: 12.5em;
   height: 3em;
@@ -136,6 +137,9 @@ input[type="submit"]:hover {
   background-color: bisque;
   text-align: left;
   
+  bottom: 0;
+  left: 0;
+  right: 0; 
   padding: 20px;
 }
 .text{

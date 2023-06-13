@@ -5,69 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donate</title>
-  <link rel="stylesheet" type="text/css" href="donate.css">
+  <title>Request</title>
+  <link rel="stylesheet" href="request1.css">
   <link rel="icon" href="drop1.jpg">
-  <script type="text/javascript">
-    function validateForm() {
-      var name = document.forms["myForm"]["name"].value;
-      var phone = document.forms["myForm"]["phone"].value;
-      var email = document.forms["myForm"]["email"].value;
-      var address = document.forms["myForm"]["address"].value;
-      var gender = document.forms["myForm"]["gender"].value;
-      var bloodGroup = document.forms["myForm"]["bloodGroup"].value;
-      var dob = document.forms["myForm"]["dob"].value;
-
-      if (name == "") {
-        alert("Name must be filled out");
-        return false;
-      }
-
-      if (phone == "") {
-        alert("Phone number must be filled out");
-        return false;
-      }
-
-      // Validate phone number format
-      var phoneRegex = /^\d{10}$/; // 10 digits only
-      if (!phone.match(phoneRegex)) {
-        alert("Invalid phone number format");
-        return false;
-      }
-
-      if (email == "") {
-        alert("Email must be filled out");
-        return false;
-      }
-
-      // Validate email format
-      var emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; // basic email format
-      if (!email.match(emailRegex)) {
-        alert("Invalid email format");
-        return false;
-      }
-
-      if (address == "") {
-        alert("Address must be filled out");
-        return false;
-      }
-
-      if (gender == "") {
-        alert("Gender must be selected");
-        return false;
-      }
-
-      if (bloodGroup == "") {
-        alert("Blood group must be selected");
-        return false;
-      }
-
-      if (dob == "") {
-        alert("Date of birth must be filled out");
-        return false;
-      }
-    }
-  </script>
+  
 </head>
 
 <body>
@@ -78,7 +19,7 @@
         <img src="orangered.png" height="60px" width="80px" style="margin-left: 10vh;" alt="logo">
         <ul>
           <b>
-            <li><a href="HemoGive.html" style="margin-left: 30vh;">Home</a></li>
+            <li><a href="HemoGive.php" style="margin-left: 30vh;">Home</a></li>
           </b>
           <b>
             <li><a href="#about" style="margin-left: 20px;">About Us</a></li>
@@ -90,37 +31,34 @@
             <li><a href="#footer" style="margin-left: 20px;">Contact Us</a></li>
           </b>
           <b>
-            <li><a href="donate.html" class="button" style="margin-left: 30vh;">Donate Blood</a></li>
+            <li><a href="donate.php" class="button" style="margin-left: 30vh;">Donate Blood</a></li>
           </b>
           <b>
-            <li><a href="request1.html" class="button" style="margin-left: 30px;">Request Blood</a></li>
+            <li><a href="admin.php" class="button" style="margin-left: 30px;">Request Blood</a></li>
           </b>
         </ul>
       </div>
     </nav>
   </div>
   <br><br><br><br><br><br>
+  <div class="bg-image" style="background-image: url(girl.jpg); height: 100%; width: 100%;"></div>
   <div>
-    <h1>Donate Blood</h1>
+    <h1>Request Blood</h1>
   </div>
   <div class="mainbody">
+
     <div class="img" style="display: inline-block;">
-      <img src="girl.jpg" height="400" width="450">
+      <img src="donate1.jpg" height="400" width="350">
     </div>
     <div class="outerbox" style="display: inline-block;">
-        <form name="myForm" onsubmit="return validateForm()" method="post">
-        <span class="title"> <b>Please send us your detail</b></span><br>
-        <input type="text" name="Name" placeholder="Name" required><br>
+    <form action="insert2.php" name="formfill" method="POST" onsubmit="return validation()">
+        <span class="title"> <b>Blood Request Form</b></span><br>
+        <input type="text" name="Full_Name" placeholder="Name" required><br>
         <input type="tel" name="Phone" placeholder="Phone" required><br>
         
         <input type="email" name="Email" placeholder="Email" required><br>
-        <input type="text" name="dob" placeholder="Date of Birth" onfocus="(this.type='date')" required><br>
-        <select name="gender" id="gender" required>
-          <option value="Gender">Gender</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select>
-        <select name="Blood" id="bloodgrp" required>
+        <textarea name="Note" id="note" cols="43" rows="4" placeholder="Note"></textarea>     
+         <select name="Blood_Group" id="bloodgrp" required>
           <option value="bloodgrp">Blood Group</option>
           <option value="A+">A+</option>
           <option value="A-">A-</option>
@@ -132,11 +70,50 @@
           <option value="AB-">AB-</option>
           <option value="unknown">Unknown</option>
         </select><br>
-        <input type="text" name="address" placeholder="Address"><br>
-        <input type=submit name="submit" value=Submit id="submit" >
+        <input type="text" name="Addreess" placeholder="Address"><br>
+        <input type="submit" value="Request" name="submit">
+        <a href="admin.php"><input type="button" value="View Record" name="View"></a>
+
+        
         </center>
+       
       </form>
     </div>
+    <script>
+      function validation() {
+        var x=document.formfill.Email.value;
+        var atpos=x.indexOf('@');
+        var dotpos=x.lastIndexOf('.');
+        if (document.formfill.Full_Name.value == "") {
+            alert("Please enter your Name!");
+            document.formfill.Full_Name.focus();
+            return false;
+        }
+     
+        else if ((document.formfill.Email.value == "") || (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length)) {
+            alert("Please enter valid email!");
+            document.formfill.Email.focus();
+            return false;
+        }
+        else if((document.formfill.Phone.value=="")||(document.formfill.Phone.value.length!=10)){
+            alert("Please enter valid contact number!");
+            document.formfill.Phone.focus();
+            return false;
+        }
+        else if(document.formfill.Addreess.value==""){
+            alert("Please provide valid address");
+            document.formfill.Addreess.focus();
+            return false;
+        }
+        else if(document.formfill.Note.value==""){
+            alert("Please provide valid address");
+            document.formfill.Note.focus();
+            return false;
+        }
+        alert("Thank You! Your Request has been submitted. We will get back to you soon!");
+        return true;
+    }
+  </script>
   </div>
   <br><br>
  
